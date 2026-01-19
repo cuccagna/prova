@@ -1,1 +1,40 @@
 @charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+h1 {
+    margin: 0;
+}
+
+:root {
+    --main-color: #15f8ed;
+    --secondary-color: #f8f8f8;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.container-header {
+    background-color: var(--main-color);
+    min-height: 100px;
+}
+.main-header {
+    /* background-color: #f8f8f8; */
+    /* imposta verde acqua moderno come colore di sfondo */
+    color: var(--secondary-color);
+}
+
+h1 {
+    text-align: center;
+    padding-top: 0.2em;
+}
