@@ -22,19 +22,55 @@ body {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
+    min-height: inherit;
 }
 
 .container-header {
     background-color: var(--main-color);
-    min-height: 100px;
+    min-height: inherit;
 }
 .main-header {
     /* background-color: #f8f8f8; */
     /* imposta verde acqua moderno come colore di sfondo */
     color: var(--secondary-color);
+    min-height: 100px;
 }
 
 h1 {
     text-align: center;
     padding-top: 0.2em;
+}
+
+.nav-header {
+    float: right;
+}
+
+@media (min-width: 1000px) {
+    .main-header {
+        /*Imposta uno sfondo nero con cerchi verde acqua distanziati tra loro*/
+
+        padding-block: 1em;
+        position: relative;
+        min-height: 200px;
+        color: rgb(56, 55, 55);
+    }
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        /*Imposta un'immagine di sfondo si un campo di calcio*/
+        background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1000&q=80");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        filter: blur(3px);
+        z-index: -1;
+    }
+
+    .container-header {
+        background-color: unset;
+        /*Gradiente radiale in modo che sfuma ai bordi*/
+        background-image: radial-gradient(circle, rgba(21, 248, 237, 0.3) 0%, rgba(21, 248, 237, 0.02) 63%);
+    }
 }
